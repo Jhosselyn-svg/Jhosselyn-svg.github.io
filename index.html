@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COFFE MAI O | Café & Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-icon">✳</span> COFFE<span>MAI O</span></a>
+    <nav>
+      <a href="#inicio">Inicio</a><a href="#menu">Menú</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-button" onclick="toggleCart()">Carrito <span id="cart-count">0</span> <b>＋</b></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">CAFÉ DE ESPECIALIDAD · HECHO CON CARIÑO</p>
+        <h1>Tu pausa favorita<br>empieza <em>aquí.</em></h1>
+        <p class="hero-text">Café recién preparado, sándwiches deliciosos y momentos que se disfrutan sin prisa.</p>
+        <div class="hero-actions"><a class="button primary" href="#menu">Explorar menú <span>↗</span></a><a class="text-link" href="#nosotros">Conócenos</a></div>
+        <div class="hero-note"><span>★★★★★</span> Hecho al momento, para ti.</div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=1200&q=85" alt="Café frío con leche">
+        <div class="photo-tag"><b>01 / 04</b><span>Un sorbo de felicidad</span></div>
+      </div>
+      <div class="hero-stamp">GOOD<br>COFFEE<br>GOOD DAY</div>
+    </section>
+
+    <section class="intro" id="nosotros">
+      <p class="eyebrow">UN RINCÓN PARA DISFRUTAR</p>
+      <h2>Pequeños momentos.<br><em>Grandes sabores.</em></h2>
+      <p>Seleccionamos ingredientes frescos y preparamos cada pedido con dedicación. Ven por tu café favorito o pide algo rico para llevar.</p>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading"><div><p class="eyebrow">PREPARADO PARA TI</p><h2>Nuestro menú<span>.</span></h2></div><p>Elige tus favoritos y agrégalos<br>al carrito.</p></div>
+      <div class="category-label"><span>01</span> CAFÉ & BEBIDAS</div>
+      <div class="products">
+        <article class="product-card">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Café latte"><span class="badge">FAVORITO</span></div>
+          <div class="product-info"><div><h3>Latte clásico</h3><p>Espresso suave con leche cremosa.</p></div><strong>Q 22.00</strong></div>
+          <button class="add-button" onclick="addToCart('Latte clásico',22)">Agregar al carrito <span>＋</span></button>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Café frío"><span class="badge">REFRESCANTE</span></div>
+          <div class="product-info"><div><h3>Iced coffee</h3><p>Café frío, leche y mucho sabor.</p></div><strong>Q 25.00</strong></div>
+          <button class="add-button" onclick="addToCart('Iced coffee',25)">Agregar al carrito <span>＋</span></button>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85" alt="Capuchino"><span class="badge">CLÁSICO</span></div>
+          <div class="product-info"><div><h3>Capuchino</h3><p>Espresso con espuma de leche.</p></div><strong>Q 24.00</strong></div>
+          <button class="add-button" onclick="addToCart('Capuchino',24)">Agregar al carrito <span>＋</span></button>
+        </article>
+      </div>
+      <div class="category-label sandwich-label"><span>02</span> SÁNDWICHES & PANINIS</div>
+      <div class="products">
+        <article class="product-card">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=85" alt="Sándwich de jamón y queso"></div>
+          <div class="product-info"><div><h3>Jamón & queso</h3><p>Pan artesanal, jamón y queso fundido.</p></div><strong>Q 32.00</strong></div>
+          <button class="add-button" onclick="addToCart('Sándwich jamón y queso',32)">Agregar al carrito <span>＋</span></button>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=800&q=85" alt="Sándwich de vegetales"></div>
+          <div class="product-info"><div><h3>Veggie especial</h3><p>Vegetales frescos, queso y aderezo.</p></div><strong>Q 30.00</strong></div>
+          <button class="add-button" onclick="addToCart('Sándwich veggie especial',30)">Agregar al carrito <span>＋</span></button>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1550507992-eb63ffee0847?auto=format&fit=crop&w=800&q=85" alt="Panini tostado"></div>
+          <div class="product-info"><div><h3>Panini de la casa</h3><p>Pan tostado, queso y sabores especiales.</p></div><strong>Q 35.00</strong></div>
+          <button class="add-button" onclick="addToCart('Panini de la casa',35)">Agregar al carrito <span>＋</span></button>
+        </article>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div><p class="eyebrow">TU MOMENTO, TU SABOR</p><h2>Una buena conversación<br>siempre va con café.</h2><a href="#menu" class="button light">Pedir ahora ↗</a></div>
+      <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Interior acogedor de una cafetería">
+    </section>
+
+    <section class="contact-section" id="contacto">
+      <div><p class="eyebrow">¿TIENES UNA PREGUNTA?</p><h2>Hablemos<span>.</span></h2><p>Escríbenos para consultar el menú, hacer un pedido o enviarnos tus comentarios.</p></div>
+      <form id="contact-form" onsubmit="sendMessage(event)">
+        <label>Tu nombre<input id="client-name" type="text" placeholder="¿Cómo te llamas?" required></label>
+        <label>Tu mensaje<textarea id="client-message" rows="3" placeholder="Escribe tu mensaje..." required></textarea></label>
+        <button class="button primary" type="submit">Enviar mensaje ↗</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#inicio">✳ VERDE<span>CAFÉ</span></a><p>Un buen café hace el día mejor.</p><small>© 2026 Verde Café. Sitio de demostración.</small></footer>
+
+  <div class="cart-overlay" id="cart-overlay" onclick="if(event.target===this)toggleCart()">
+    <aside class="cart-panel">
+      <div class="cart-head"><div><p class="eyebrow">TU SELECCIÓN</p><h2>Mi carrito</h2></div><button class="close-cart" onclick="toggleCart()">×</button></div>
+      <div id="cart-items" class="cart-items"><p class="empty-cart">Tu carrito está vacío. ¡Agrega algo rico!</p></div>
+      <div class="cart-bottom"><div class="total-line"><span>Total</span><strong id="cart-total">Q 0.00</strong></div><button class="button primary checkout" onclick="checkout()">Finalizar pedido por WhatsApp ↗</button><small>El pedido se enviará para confirmar disponibilidad y forma de pago.</small></div>
+    </aside>
+  </div>
+
+  <script>
+    // CAMBIA ESTE NÚMERO por el WhatsApp del negocio: código de país + número, solo dígitos.
+    const WHATSAPP_NUMBER = "50242847075";
+    let cart = [];
+    function addToCart(name, price) {
+      const item = cart.find(p => p.name === name);
+      if (item) item.qty++; else cart.push({name, price, qty:1});
+      renderCart();
+      document.getElementById('cart-overlay').classList.add('open');
+    }
+    function renderCart() {
+      const box = document.getElementById('cart-items');
+      const count = cart.reduce((s,p)=>s+p.qty,0);
+      const total = cart.reduce((s,p)=>s+p.price*p.qty,0);
+      document.getElementById('cart-count').textContent = count;
+      document.getElementById('cart-total').textContent = 'Q ' + total.toFixed(2);
+      if (!cart.length) { box.innerHTML='<p class="empty-cart">Tu carrito está vacío. ¡Agrega algo rico!</p>'; return; }
+      box.innerHTML = cart.map((p,i)=>`<div class="cart-row"><div><b>${p.name}</b><small>Q ${p.price.toFixed(2)} c/u</small><div class="quantity"><button onclick="changeQty(${i},-1)">−</button><span>${p.qty}</span><button onclick="changeQty(${i},1)">＋</button></div></div><strong>Q ${(p.price*p.qty).toFixed(2)}</strong></div>`).join('');
+    }
+    function changeQty(i, delta) { cart[i].qty += delta; if(cart[i].qty<=0) cart.splice(i,1); renderCart(); }
+    function toggleCart() { document.getElementById('cart-overlay').classList.toggle('open'); }
+    function checkout() {
+      if (!cart.length) { alert('Agrega productos al carrito antes de continuar.'); return; }
+      if (WHATSAPP_NUMBER === "50200000000") { alert('Antes de recibir pedidos, configura el número de WhatsApp del negocio en el código HTML.'); return; }
+      const lines = cart.map(p=>`${p.qty} x ${p.name} - Q ${(p.qty*p.price).toFixed(2)}`).join('%0A');
+      const total = cart.reduce((s,p)=>s+p.qty*p.price,0);
+      const msg = `Hola, quiero realizar este pedido:%0A${lines}%0A%0ATotal: Q ${total.toFixed(2)}%0A¿Me confirman disponibilidad y forma de pago?`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,'_blank');
+    }
+    function sendMessage(e) {
+      e.preventDefault();
+      if (WHATSAPP_NUMBER === "50200000000") { alert('Configura primero el número de WhatsApp del negocio en el código HTML.'); return; }
+      const name = document.getElementById('client-name').value;
+      const message = document.getElementById('client-message').value;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola, soy '+name+'. '+message)}`,'_blank');
+    }
+  </script>
+</body>
+</html>
